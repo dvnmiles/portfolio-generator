@@ -1,27 +1,30 @@
+//var message = 'Hello Node!';
+//var sum = 5 + 3;
+//console.log(message);
+//console.log(sum);
 
-
-//var profileDataArgs = process.argv.slice(2, process.argv.length);
-//console.log(profileDataArgs);
-const animalArray = ['dog', 'cat', 'pig'];
-
-animalArray.push('cow');
-
-const personObj = {
-  name: 'Miles',
-  age: 99
-};
-var commandLineArgs = process.argv;
-console.log(commandLineArgs);
-
-process.argv[1]
+//var commandLineArgs = process.argv;
+//console.log(commandLineArgs);
 
 const profileDataArgs = process.argv.slice(2, process.argv.length);
-console.log(profileDataArgs);
+//console.log(profileDataArgs);
 
-personObj.age = 100;
-personObj.occupation = 'Developer';
-console.log(err)
+const printProfileData = profileDataArr => {
+    for (let i = 0; i < profileDataArr.length; i += 1) {
+    console.log('================');
+    
+    console.log(profileDataArr[i]);
+      }
 
-//.slice () example 
-//const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-//console.log(animals.slice(2, 6));
+    console.log('================');
+  // Is the same as this...
+  profileDataArr.forEach(profileItem => console.log(profileItem));
+  for (let i = 0; i < profileDataArr.length; i += 1) {
+    console.log('================');
+
+    console.log(profileDataArr[i]);
+  }
+    console.log('================');
+};
+
+printProfileData(profileDataArgs);
